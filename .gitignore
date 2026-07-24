@@ -11,7 +11,4 @@ clients/
 
 # Velociraptor log symlinks (broken on Windows filesystems, real logs are
 # in the dated *.log.YYYYMMDDHHmm files)
-velociraptor/*.log
-
-# Stray file from a script writing to "nul" instead of /dev/null on Windows
-velociraptor/nul
+velociraptor/

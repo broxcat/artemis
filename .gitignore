@@ -9,6 +9,13 @@ clients/
 *.exe
 *.msi
 
-# Velociraptor log symlinks (broken on Windows filesystems, real logs are
-# in the dated *.log.YYYYMMDDHHmm files)
+# Velociraptor runtime data directory (bind-mounted into the container).
+# Entirely generated/managed by the `entrypoint` script at container start:
+# server/client config (incl. private keys and CA), datastore, filestore,
+# users, ACLs, hunts, notebooks, downloads, and logs. Never commit this —
+# it contains live credentials and key material, not deployment config.
 velociraptor/
+
+# OS cruft
+.DS_Store
+Thumbs.db
